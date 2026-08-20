@@ -9,6 +9,10 @@
   --color-ink-700: #201d2f;
   --color-ink-600: #312d45;
   --color-ink-400: #6f6a87;
+  /* ink-400はplaceholder等の非本文装飾用途に留める（ink/ink-800いずれの上でもコントラスト比3.5〜3.8で
+     通常テキストの基準4.5:1に届かない）。dt/breadcrumb等の実際に読ませるテキストにはink-300を使う
+     （ink上で5.91、ink-800上で5.53。Phase 5のLighthouse color-contrast監査で発覚し追加）。 */
+  --color-ink-300: #8f8aa3;
   --color-paper: #f4f3ff;
   --color-paper-dim: #e4e1f5;
   --color-paper-soft: #faf9ff;

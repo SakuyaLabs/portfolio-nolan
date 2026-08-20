@@ -26,9 +26,9 @@ export default function JobCard({ job, headingLevel = "h3" }: Props) {
       {/* dt/ddはdivでラップせず、dlの直下に置く（①NAGI Phase 5の反省点）。ddの右マージンで
           「ラベル: 値」ペア同士の間隔を作る。 */}
       <dl className="font-sans-jp mt-5 flex flex-wrap gap-x-1.5 gap-y-1 text-xs text-paper-dim">
-        <dt className="text-ink-400">雇用形態</dt>
+        <dt className="text-ink-300">雇用形態</dt>
         <dd className="mr-6">{job.employmentType}</dd>
-        <dt className="text-ink-400">勤務地</dt>
+        <dt className="text-ink-300">勤務地</dt>
         <dd>{job.location}</dd>
       </dl>
     </Link>

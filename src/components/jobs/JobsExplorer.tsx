@@ -50,7 +50,7 @@ export default function JobsExplorer({ jobs, headingLevel = "h3" }: Props) {
         })}
       </div>
 
-      <p aria-live="polite" className="font-sans-jp mt-4 text-xs text-ink-400">
+      <p aria-live="polite" className="font-sans-jp mt-4 text-xs text-ink-300">
         {visible.length}件の求人
       </p>
 

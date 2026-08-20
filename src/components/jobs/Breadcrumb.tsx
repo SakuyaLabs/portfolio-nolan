@@ -11,7 +11,7 @@ export type BreadcrumbItem = {
  */
 export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
   return (
-    <nav aria-label="パンくずリスト" className="font-sans-jp text-xs text-ink-400">
+    <nav aria-label="パンくずリスト" className="font-sans-jp text-xs text-ink-300">
       <ol className="flex flex-wrap items-center gap-1.5">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;

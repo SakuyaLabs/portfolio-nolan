@@ -61,11 +61,11 @@ export default async function JobDetailPage({ params }: Props) {
           {/* dt/ddはdivでラップせずdl直下に置く（①NAGI Phase 5の反省点）。2列グリッドで
               ラベルと値を揃える（⑤ミライ工務店`CompanyHistory`で確立したdlパターン）。 */}
           <dl className="font-sans-jp mt-6 grid grid-cols-[6rem_1fr] gap-y-3 border-t border-ink-600 pt-6 text-sm">
-            <dt className="text-ink-400">雇用形態</dt>
+            <dt className="text-ink-300">雇用形態</dt>
             <dd className="text-paper">{job.employmentType}</dd>
-            <dt className="text-ink-400">勤務地</dt>
+            <dt className="text-ink-300">勤務地</dt>
             <dd className="text-paper">{job.location}</dd>
-            <dt className="text-ink-400">給与</dt>
+            <dt className="text-ink-300">給与</dt>
             <dd className="text-paper">{job.salary}</dd>
           </dl>
         </div>
