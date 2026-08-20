@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* Nolan 採用サイト デザインシステム（企画書 Phase 2 / CLAUDE.md 準拠）
+   コンセプト：本音・裁量・テック感 */
+@theme {
+  /* カラー：Primary(インク) / Secondary(淡い紫白) / Accent(ヴァイオレット) */
+  --color-ink: #0b0b14;
+  --color-ink-800: #15131f;
+  --color-ink-700: #201d2f;
+  --color-ink-600: #312d45;
+  --color-ink-400: #6f6a87;
+  --color-paper: #f4f3ff;
+  --color-paper-dim: #e4e1f5;
+  --color-paper-soft: #faf9ff;
+  --color-violet: #7c5cff;
+  /* 明背景(paper/paper-soft)でテキストとして使うと素のvioletはコントラスト比不足(実測3.96)になるため、
+     暗くしたvioletdeepを使う(paper上で6.11)。暗背景(ink)では逆に明るくしたviolet-softを使う(ink上で5.48)。
+     ③FORGE以降の標準方針：配色決定時点でコントラスト比を検証する。 */
+  --color-violet-deep: #5329ff;
+  --color-violet-soft: #8c70ff;
+
+  /* タイポグラフィ：見出し欧文はSpace Grotesk(幾何学的でプロダクト然としたテック感)、
+     見出し和文・本文はNoto Sans JP。①〜⑤で使ったことのないフォントペアリング。 */
+  --font-space-grotesk: var(--font-space-grotesk-google), sans-serif;
+  --font-sans-jp: var(--font-noto-sans-jp), sans-serif;
+
+  /* 余白：8pxグリッド基準、セクション間 96px(デスクトップ)/56px(モバイル) */
+  --spacing-section: 6rem;
+  --spacing-section-mobile: 3.5rem;
+
+  --ease-product: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* この案件で初めてダークモードを基調にする（①〜⑤との差別化、docs/planning.md 意思決定ログ）。 */
+:root {
+  --background: var(--color-ink);
+  --foreground: var(--color-paper);
+}
+
+* {
+  border-color: var(--color-ink-600);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans-jp);
+}
+
+/* 全インタラクティブ要素のフォーカスリング */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-violet-soft);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
