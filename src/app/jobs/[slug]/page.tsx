@@ -114,7 +114,7 @@ export default async function JobDetailPage({ params }: Props) {
         <div className="mt-14 flex flex-col gap-4 border-t border-ink-600 pt-10 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-sans-jp text-sm text-paper-dim">このポジションに興味を持った方は、エントリーへ進んでください。</p>
           <Link
-            href="/entry"
+            href={`/entry?position=${job.slug}`}
             className="font-sans-jp inline-flex w-fit items-center rounded-full bg-violet px-6 py-3 text-sm font-medium text-ink transition-shadow duration-300 hover:shadow-[0_0_20px_rgba(124,92,255,0.5)]"
           >
             エントリーする
