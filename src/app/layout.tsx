@@ -20,6 +20,7 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nolan.sakuyalabs.com"),
+  alternates: { canonical: "/" },
   title: {
     default: "Nolan | エンジニア採用",
     template: "%s | Nolan",
